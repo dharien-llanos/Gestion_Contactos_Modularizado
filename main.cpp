@@ -7,13 +7,16 @@ int main() {
     do {
         cout << "\n=====MENU=====\n";
         cout << "1. Agregar contacto\n";
-        cout << "2. Salir\n";
-        cout << "Opcion: ";
+        cout << "2. Eliminar contacto\n";
+        cout << "3. Salir\n";
+
         cin >> opcion;
 
-        switch (opcion) {
+            switch (opcion) {
             case 1: agregarContacto(); break;
-            case 2: cout << "Saliendo...\n"; break;
+            case 2: eliminarContacto(); break;
+            case 3: cout << "Saliendo...\n"; break;
+
             default: cout << "Opcion no valida\n";
         }
 

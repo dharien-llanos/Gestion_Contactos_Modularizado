@@ -34,3 +34,32 @@ void agregarContacto() {
 
     cout << "Contacto agregado correctamente\n";
 }
+void eliminarContacto() {
+    if (totalContactos == 0) {
+        cout << "No hay contactos registrados\n";
+        return;
+    }
+
+    string emailEliminar;
+    cout << "\n---ELIMINAR CONTACTO---\n";
+    cout << "Ingrese email: ";
+    cin >> emailEliminar;
+
+    bool encontrado = false;
+    for (int i = 0; i < totalContactos; i++) {
+        if (contactos[i].email == emailEliminar) {
+            for (int j = i; j < totalContactos - 1; j++) {
+                contactos[j] = contactos[j + 1];
+            }
+            totalContactos--;
+            encontrado = true;
+            cout << "Contacto eliminado\n";
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "Contacto no encontrado\n";
+    }
+}
+

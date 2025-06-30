@@ -19,5 +19,7 @@ extern contactoEmail contactos[MAX];
 extern int totalContactos;
 
 void agregarContacto();
+void eliminarContacto();
+
 
 #endif
